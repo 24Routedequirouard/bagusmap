@@ -955,9 +955,40 @@ h1{animation:fadeUp 0.7s 0.4s ease both;}
   
   
 
-  /* MEET BAGUS */
+  /* MEET BAGUS — image as background, focused on right side (face + device) */
+  .meet-section {
+    position: relative;
+    background: var(--black);
+    height: 640px;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+  }
+  .meet-picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
   .meet-desktop-img {
-    object-position: 50% 90%;
+    width: 32%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    margin-left: auto;
+    display: block;
+    object-fit: cover;
+    object-position: 100% 50%;
+  }
+  /* Mirror of .hero-left-overlay: overlay covers only image area, gradient black→transparent */
+  .meet-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 32%;
+    background: linear-gradient(to right, var(--black), transparent 50%);
   }
 }
 
@@ -1022,7 +1053,7 @@ h1{animation:fadeUp 0.7s 0.4s ease both;}
     margin: 0 auto;
   }
   .problem-img {
-    height: 280px;
+    height: 400px;
     min-height: 0;
   }
   .problem-card p { font-size: 15px; }
@@ -1030,7 +1061,7 @@ h1{animation:fadeUp 0.7s 0.4s ease both;}
 
 /* Ultra-wide */
 @media (min-width: 1800px) {
-  .problem-img { height: 320px; }
+  .problem-img { height: 460px; }
 }
 </style>
 </head>
